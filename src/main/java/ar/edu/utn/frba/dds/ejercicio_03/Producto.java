@@ -4,17 +4,19 @@ public abstract class Producto {
 
   private String nombre;
 
-  private String marca;
+  private Marca marca;
 
   public Producto() {
 
   }
 
   public Double precio() {
-    return 0.0;
+
+      return 0.0;
   }
 
   public Integer stock() {
-    return 0;
+
+      return 0;
   }
 }

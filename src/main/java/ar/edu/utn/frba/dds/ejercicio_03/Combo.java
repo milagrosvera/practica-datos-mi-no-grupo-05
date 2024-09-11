@@ -7,7 +7,7 @@ public class Combo {
   private List<Producto> productos;
 
   public Double precio(){
-    return 0.0;
+    return this.productos.stream().mapToDouble(p-> p.precio()).sum();
   }
 
 

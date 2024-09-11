@@ -1,4 +1,6 @@
-package ar.edu.utn.frba.dds.ejercicio_02;
+package ar.edu.utn.frba.dds.ejercicio_02.personajes;
+
+import ar.edu.utn.frba.dds.ejercicio_02.elementos.ElementoDefensor;
 
 import java.util.List;
 

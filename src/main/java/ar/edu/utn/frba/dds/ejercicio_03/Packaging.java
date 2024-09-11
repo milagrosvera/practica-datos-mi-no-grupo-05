@@ -7,7 +7,8 @@ public class Packaging extends Decorado{
     return this.producto.precio() + this.precio;
   }
 
-  public Packaging() {
+  public Packaging(Double precio) {
 
+      this.precio = precio;
   }
 }
