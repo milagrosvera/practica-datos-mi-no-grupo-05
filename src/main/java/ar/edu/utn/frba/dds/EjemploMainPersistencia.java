@@ -1,6 +1,6 @@
 package ar.edu.utn.frba.dds;
 
-public class MainEjercicio1  {
+public class EjemploMainPersistencia {
     
     public static void main(String[] args) {
 
