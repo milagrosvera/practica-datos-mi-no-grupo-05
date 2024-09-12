@@ -1,7 +1,11 @@
 package ar.edu.utn.frba.dds.ejercicio_03;
 
-public class ProductoSimple extends Producto{
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class ProductoSimple extends Producto{
   private Double precio;
   private Integer stock;
 
