@@ -4,11 +4,11 @@ public class MainEjercicio1  {
     
     public static void main(String[] args) {
 
-        Ejercicio1 ejercicio = new Ejercicio1();
-        ejercicio.setNombre("ejemplo");
+        PruebaPersistencia prueba = new PruebaPersistencia();
+        prueba.setNombre("ejemplo");
 
         Repositorio repositorio = new Repositorio();
 
-        repositorio.guardar(ejercicio);
+        repositorio.guardar(prueba);
     }
 }

@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Ejercicio1 {
+public class PruebaPersistencia {
 
     @Id @GeneratedValue
     public Integer id;
