@@ -1,4 +1,4 @@
-package ar.edu.utn.frba.dds.ejercicio_02.Converters;
+package ar.edu.utn.frba.dds.ejercicio_02.converters;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

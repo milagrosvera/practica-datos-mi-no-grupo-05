@@ -1,20 +1,12 @@
 package ar.edu.utn.frba.dds.ejercicio_02.personajes;
 
 import ar.edu.utn.frba.dds.ejercicio_02.Persistente;
+import ar.edu.utn.frba.dds.ejercicio_02.converters.ElementoDefensorAttributeConverter;
 import ar.edu.utn.frba.dds.ejercicio_02.elementos.ElementoDefensor;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +16,10 @@ import java.util.List;
 public abstract class Personaje extends Persistente {
 
   @Getter
-  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  @JoinColumn(name = "personaje_id")
+  @ElementCollection
+  @CollectionTable(name = "elemento_defensor")
+  @Convert(converter = ElementoDefensorAttributeConverter.class)
+  @Column(name = "elemento")
   private List<ElementoDefensor> elementos;
 
   @Getter @Setter

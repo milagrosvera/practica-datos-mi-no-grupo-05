@@ -1,6 +1,6 @@
 package ar.edu.utn.frba.dds.ejercicio_02;
 
-import ar.edu.utn.frba.dds.ejercicio_02.Converters.LocalDateTimeAttributeConverter;
+import ar.edu.utn.frba.dds.ejercicio_02.converters.LocalDateTimeAttributeConverter;
 import ar.edu.utn.frba.dds.ejercicio_02.personajes.Personaje;
 import lombok.Getter;
 import lombok.Setter;
