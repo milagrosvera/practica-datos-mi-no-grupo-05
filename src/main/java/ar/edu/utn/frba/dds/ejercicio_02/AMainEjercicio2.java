@@ -1,5 +1,6 @@
 package ar.edu.utn.frba.dds.ejercicio_02;
 
+import ar.edu.utn.frba.dds.Repositorio;
 import ar.edu.utn.frba.dds.ejercicio_02.elementos.Arco;
 import ar.edu.utn.frba.dds.ejercicio_02.elementos.Escudo;
 import ar.edu.utn.frba.dds.ejercicio_02.elementos.Espada;
@@ -48,6 +49,8 @@ public class AMainEjercicio2 {
     nachoVilla.setNombre("Nacho");
     nachoVilla.setPersonaje(ladrILLA);
 
+    Repositorio repositorio = new Repositorio();
+    repositorio.guardar(ladrILLA);
 
   }
 }

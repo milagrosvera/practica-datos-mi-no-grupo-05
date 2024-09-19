@@ -5,8 +5,17 @@ import ar.edu.utn.frba.dds.ejercicio_02.converters.ElementoDefensorAttributeConv
 import ar.edu.utn.frba.dds.ejercicio_02.elementos.ElementoDefensor;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.*;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ElementCollection;
+import javax.persistence.CollectionTable;
+import javax.persistence.Convert;
+import javax.persistence.Column;
+import org.hibernate.annotations.CascadeType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +29,7 @@ public abstract class Personaje extends Persistente {
   @CollectionTable(name = "elemento_defensor")
   @Convert(converter = ElementoDefensorAttributeConverter.class)
   @Column(name = "elemento")
+  @Cascade(CascadeType.PERSIST)
   private List<ElementoDefensor> elementos;
 
   @Getter @Setter

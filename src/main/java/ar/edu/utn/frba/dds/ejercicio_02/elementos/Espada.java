@@ -6,9 +6,7 @@ import ar.edu.utn.frba.dds.ejercicio_02.personajes.Personaje;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "espada")
-public class Espada extends Persistente implements ElementoDefensor{
+public class Espada implements ElementoDefensor{
 
   @Override
   public void defenderA(Personaje personaje) {

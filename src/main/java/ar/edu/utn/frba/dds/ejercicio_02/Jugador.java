@@ -23,7 +23,7 @@ public class Jugador extends Persistente{
   private LocalDate fechaAlta;
 
   @OneToOne
-  @JoinColumn(name = "personaje_id", referencedColumnName = "id")
+  @JoinColumn(name = "personaje_id", referencedColumnName = "id", unique = true)
   private Personaje personaje;
 
   public Jugador() {
