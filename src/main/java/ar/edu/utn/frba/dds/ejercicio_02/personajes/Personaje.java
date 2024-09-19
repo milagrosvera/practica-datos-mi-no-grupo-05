@@ -7,8 +7,11 @@ import lombok.Setter;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -16,8 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "personaje")
-public class Personaje extends Persistente {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_personaje")
+public abstract class Personaje extends Persistente {
 
   @Getter
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
