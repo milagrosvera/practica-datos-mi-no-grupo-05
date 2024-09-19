@@ -9,7 +9,7 @@ import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;
 import javax.persistence.Converter;
 
-@Converter(autoApply = true)
+@Converter
 public class ElementoDefensorAttributeConverter implements AttributeConverter<ElementoDefensor, String> {
 
     @Override
